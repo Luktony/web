@@ -11,7 +11,7 @@ export function NewTaskForm() {
     event.preventDefault();
 
     if (!title) {
-      return toast.error("Erro na criação do hábito");
+      return toast.error("Erro na criação da tarefa.");
     }
 
     try {
@@ -19,9 +19,9 @@ export function NewTaskForm() {
         title,
       });
       setTitle("");
-      toast.success("Task criado com sucesso!");
+      toast.success("Tarefa criado com sucesso!");
     } catch (error) {
-      toast.error("Erro ao criar task");
+      toast.error("Erro ao criar tarefa");
     }
   }
 

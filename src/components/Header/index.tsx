@@ -6,7 +6,8 @@ import BreakTimers from '../BreakTimers';
 
 export function Header() {
   return (
-    <div className="flex justify-center items-center h-screen">
+    
+    <div className="flex justify-center items-center  ">
       <div className="flex-1 p-4">
         <div className="flex flex-col items-center">         
           <Timer />

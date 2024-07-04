@@ -32,7 +32,7 @@ export function SummaryTask() {
 
   async function deleteTask(taskId: string) {
     await api.delete(`/todos/${taskId}`);
-    toast("Task Deletada");
+    toast("Tarefa Deletada");
   }
 
   useEffect(() => {
