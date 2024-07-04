@@ -6,7 +6,7 @@ const AudioPlayer: React.FC = () => {
       <div className="flex items-center">
         <span className="mr-2">Lofi Music</span>
         <audio controls className="outline-none">
-          <source src="../public/audio/relax.mp3" type="audio/mpeg" />
+          <source src="../public/relax.mp3" type="audio/mpeg" />
           Seu navegador não suporta o elemento de áudio.
         </audio>
       </div>
