@@ -26,8 +26,7 @@ export function NewTaskForm() {
   }
 
   return (
-    <>
-    <ToastContainer />
+ 
     <div className="max-w-lg w-11/12">
       
       <form onSubmit={createNewTask} className="flex flex-1 justify-between">
@@ -48,6 +47,6 @@ export function NewTaskForm() {
         </button>
       </form>
     </div>
-    </>
+   
   );
 }

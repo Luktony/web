@@ -1,3 +1,4 @@
+import { Pause } from 'phosphor-react';
 import React, { useState, useEffect } from 'react';
 
 const Timer: React.FC = () => {
@@ -29,16 +30,28 @@ const Timer: React.FC = () => {
 
   const startTimer = () => {
     setIsActive(true);
+    const pauseButton = document.getElementById('pause');
+    if (pauseButton) {
+      pauseButton.classList.remove('text-red-500');
+    }
   };
 
   const pauseTimer = () => {
     setIsActive(false);
+    const pauseButton = document.getElementById('pause');
+    if (pauseButton) {
+      pauseButton.classList.add('text-red-500');
+    }
   };
 
   const resetTimer = () => {
     setIsActive(false);
     setSegundos(1500); // Reinicia para 25 minutos
     localStorage.setItem('segundos', String(1500)); // Reseta o valor no localStorage
+    const pauseButton = document.getElementById('pause');
+    if (pauseButton) {
+      pauseButton.classList.remove('text-red-500');
+    }
   };
 
   const formatTime = (segundos: number): string => {
@@ -61,7 +74,7 @@ const Timer: React.FC = () => {
         </button>
         <button
           id="pause"
-          className={`gap-2 bg-button px-4 rounded-lg m-2 p-2 min-w-20 ${isActive ? '' : 'text-red-500'}`}
+          className="gap-2 bg-button px-4 rounded-lg m-2 p-2 min-w-20 "
           onClick={pauseTimer}
         >
           Pausar
